@@ -1,5 +1,9 @@
 function rotateArray(arr, k) {
   // type your code here
+  const rotate = k % arr.length;
+  const remove = arr.splice(arr.length - rotate, rotate);
+
+  return remove.concat(arr);
 }
 
 if (require.main === module) {
